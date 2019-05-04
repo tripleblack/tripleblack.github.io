@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.active, .active > a {
+  text-decoration: none;
+  color: gray;
+}
+.breadcrumbs {
+  padding: 10px 0;
+  order: 2;
+}
+aside {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  order: 3;
+}
+.split {
+  display: flex;
+  flex-flow: row wrap;
+}
+.split > * { flex: 1 50%; }
+@media only screen and (max-width: 600px) {
+  .split > * { flex: 1 100%; }
+  aside { order: 1; }
+}
+nav > li {
+  display: inline;
+  padding-right: 5px;
+}
+.progress-bar {
+  background: gray;
+  width: 100%;
+  height: 20px;
+}
+.progress {
+  background-color: rebeccapurple;
+  height: 20px;
+  max-width: 100%;
+}
+#app-nav {
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+#app-nav a {
+  font-size: 1.3em;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#app-main {
+  min-height: 300px;
+}
+.view-nav {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.view-nav a {
+  font-size: 1.1em;
+  padding: 5px;
+  text-decoration: none;
+}
+.list-frame {
+  background-color: #eee;
+  min-height: 100px;
+  padding: 5px;
+  margin: 0;
+  list-style-type: none;
+}
+.list-frame .list-frame {
+  background-color: #d3d3d3;
+}
+.detail-frame {
+  min-height: 200px;
+  background-color: #d3d3d3;
+  padding: 5px;
+}
+.detail-frame .detail-frame {
+  min-height: 0;
+  background-color: #eee;
+}
+.mock-block {
+  background-color: #444;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+  flex-direction: column;
+}
